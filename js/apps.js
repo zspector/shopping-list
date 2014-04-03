@@ -11,10 +11,19 @@ $(document).ready(function() {
 	})
 	.on('click', '.item', function(){
 		$(this).toggleClass('cross');
-	})
-	.on('keydown', '.list', function(e) {
-		if (e.which == 16 && e.which == 13) {
-			$('.item').remove();
-		}
 	});
+	var map = {16: false, 13: false};
+	$(document).keydown(function(e) {
+    if (e.keyCode in map) {
+        map[e.keyCode] = true;
+        if (map[16] && map[13]) {
+            $('.item').remove();
+        }
+    }
+	})
+	.keyup(function(e) {
+    if (e.keyCode in map) {
+        map[e.keyCode] = false;
+    }
+});
 });
