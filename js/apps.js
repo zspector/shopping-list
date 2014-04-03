@@ -2,7 +2,7 @@ $(document).ready(function() {
 	$('.enter').keydown(function(e){
 		var toAdd = $('input[name=enter]').val();
 		if (e.keyCode == 13) {
-			$('.list').append('<div class="item">' +toAdd+ '</div>');
+			$('.list').append('<div class="item"><span>' +toAdd+ '</span></div>');
 			$(this).val('');
 		}
 	});

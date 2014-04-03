@@ -33,7 +33,6 @@ input {
 	padding-left: 30px;
 	font-size: 20px;
 	border-bottom: 2px solid #d7f4b2;
-	border-left: 3px double #e7d58d;
 }
 
 .item:first-child {
@@ -42,6 +41,11 @@ input {
 
 .item:hover {
 	cursor: pointer;
+}
+
+span {
+	border-left: 3px double #e7d58d;
+	padding-left: 5px;
 }
 
 .cross {
